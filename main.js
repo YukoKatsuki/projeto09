@@ -70,9 +70,6 @@ var width = screen.width;
   function myTouchStart (e)
   {
     console.log("myTouchStart");
-    
-    color = document.getElementById("color").value;
-    widthOfLine = document.getElementById("widthOfLine").value;
   }
 
   
@@ -81,8 +78,8 @@ var width = screen.width;
     function myTouchMove(e)
  
   {
-    currentpositionOfTouchX = e.touches[0].clientX - canvas,offsetLeft;
-    currentpositionOfTouchY = e.touches[0].clientY - canvas,offsetLeft;
+    currentpositionOfTouchX = e.touches[0].clientX - canvas.offsetLeft;
+    currentpositionOfTouchY = e.touches[0].clientY - canvas.offsetTop;
 
     ctx.beginPath();
     ctx.strokeStyle = color;
